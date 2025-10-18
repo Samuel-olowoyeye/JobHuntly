@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Epilogue, Red_Hat_Display, Inter} from "next/font/google";
+// import { ClashDisplay } from "../../utils/customFonts"; ${ClashDisplay.variable}
 import "./globals.css";
 
 const geistSans = Geist({
@@ -7,9 +8,18 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const epilogue = Epilogue({
+   variable: "--font-Epilogue",
+   subsets: ["latin"],
+});
+
+const red_Hat_Display = Red_Hat_Display({
+   variable: "--font-Red_Hat_Display",
+   subsets: ["latin"],
+});
+const inter = Inter({
+   variable: "--font-Inter",
+   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -25,10 +35,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${red_Hat_Display.variable} ${inter.variable}   ${epilogue.variable} antialiased`}
       >
         {children}
       </body>
     </html>
   );
 }
+
+
