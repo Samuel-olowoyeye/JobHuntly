@@ -95,9 +95,11 @@ const Header = () => {
       </div>
         
         <div className='hidden lg:flex flex-row items-center font-Epilogue text-[16px]'>
-            <h3 className='hover:bg-[#4640DE] px-6 py-3 hover:border font-bold text-[#4640DE] hover:text-[#ffff]'>Login</h3>
+          <Link href= "/Login">
+            <h3 className='hover:bg-[#4640DE] px-6 py-3 hover:border font-bold text-[#4640DE] hover:text-[#ffff]'>Login</h3></Link>
             <span className='mx-4 py-5.5 border border-[#D6DDEB]'></span>
-            <h3 className='bg-[#4640DE] px-6 py-3 border font-bold text-[#ffff] hover:text-[#4640DE]'>Sign Up</h3>
+            <Link href= "/Signup">
+            <h3 className='bg-[#4640DE] px-6 py-3 border font-bold text-[#ffff] hover:text-[#4640DE]'>Sign Up</h3> </Link>
         </div>
     </div>
   )

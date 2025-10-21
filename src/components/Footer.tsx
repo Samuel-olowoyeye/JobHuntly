@@ -10,7 +10,7 @@ const Footer = () => {
               <Image src="/Logo.svg" alt="logo" width={32} height={32} />
               <h1 className='font-Red_Hat_Display font-bold text-[#FFFFFF] text-2xl'>JobHuntly</h1>
             </div>
-            <h3 className='pt-8 w-[333px] lg:w-[376px] h-[78px] font-Epilogue text-[#D6DDEB]'>Great platform for the job seeker that passionate about startups. Find your dream job easier.</h3>
+            <h3 className='pt-8 w-full lg:w-[376px] h-[78px] font-Epilogue text-[#D6DDEB]'>Great platform for the job seeker that passionate about startups. Find your dream job easier.</h3>
           </div>
 
 
