@@ -65,7 +65,7 @@ const Header = () => {
               </div>
             <div className=''> 
                 <ul>
-                    <Link href="" onClick={toggleMenu}>
+                    <Link href="/Login" onClick={toggleMenu}>
                   <li className='items-center px-4 py-[2px] border-b cursor-pointer'>
                          <h3 className="my-2 font-Epilogue text-[#515B6F] text-[16px]">Login</h3>
                       </li>
@@ -74,7 +74,7 @@ const Header = () => {
               </div>
             <div className=''> 
                 <ul>
-                    <Link href="" onClick={toggleMenu}>
+                    <Link href="/Signup" onClick={toggleMenu}>
                   <li className='items-center px-4 py-[2px] border-b cursor-pointer'>
                          <h3 className="my-2 font-Epilogue text-[#515B6F] text-[16px]">Sign up</h3>
                       </li>
