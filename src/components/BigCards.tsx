@@ -5,7 +5,7 @@ import React from 'react'
 
 const BigCards = () => {
   return (
-    <div className='flex gap-8 lg:grid lg:grid-cols-4 pt-[48px] w-auto h-auto lg:overflow-visible overflow-x-auto scroll-smooth scrollbar-hide'>
+    <div className='flex gap-8 lg:grid lg:grid-cols-4 pt-[48px] w-auto h-auto lg:overflow-visible overflow-x-auto scroll-smooth no-scrollbar'>
       
         <div className='flex-shrink-0 border-[#D6DDEB] border-2 w-[274px] xl:w-[320px] h-[283px]'>
           <div className='flex flex-row justify-between mx-6 mt-6'>

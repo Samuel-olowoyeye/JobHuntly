@@ -14,8 +14,7 @@ const CategoryBaner = () => {
       <div className='pl-4'>
         <Image src="/Dashboard.svg" alt='Dashboard' width={564} height={344} className='lg:mt-[70px] w-[404px] lg:w-[564px] h-[246.41px] lg:h-[344px] object-cover' />
       </div>
-      
-    </div>
+      </div>
   )
 }
 

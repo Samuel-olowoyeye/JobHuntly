@@ -3,11 +3,23 @@ import { X } from 'lucide-react';
 import Image from 'next/image'
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
+// import { usePathname } from 'next/navigation';
+
 
 const Header = () => {
-
+  // const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  // const isActive = (nav: string) => {
+  //   switch (nav) {
+  //     case 'Find jobs':
+  //       return pathname.startsWith('/');
+  //     case 'Browse Companies':
+  //       return pathname.startsWith('/');
+  //   }
+  // };
+
 
   // Prevent background scroll when menu is open
       useEffect(() => {
@@ -22,16 +34,18 @@ const Header = () => {
       }, [menuOpen]);
 
   return (
-    <div className="flex flex-row justify-between bg-[#FFFFFF] lg:bg-[#f8f8fd] px-4 lg:px-[124px] xl:px-64 lg:py-[20px] pt-2 pb-4 w-full h-auto">
+    <div className="flex flex-row justify-between bg-[#FFFFFF] px-4 lg:px-[124px] xl:px-64 lg:py-[20px] pt-2 pb-4 w-full h-auto">
         <div className='flex lg:flex-row items-center gap-2'>
-          <div className='flex flex-row gap-2'>
-            <Image src="/Logo.svg" alt="logo" width={32} height={32} />
-            <h1 className='font-Red_Hat_Display font-bold text-[#25324B] text-2xl'>JobHuntly</h1>
-          </div>
+          <Link href= "/">
+            <div className='flex flex-row gap-2'>
+              <Image src="/Logo.svg" alt="logo" width={32} height={32} />
+              <h1 className='font-Red_Hat_Display font-bold text-[#25324B] text-2xl'>JobHuntly</h1>
+            </div>
+          </Link>
           <div>
             <div className='hidden lg:flex lg:flex-row items-center gap-4 pl-[48px] font-Epilogue text-[#515B6F] text-[16px]'>
-              <h3>Find Jobs</h3>
-              <h3>Browse Companies</h3>
+            <Link href='/FindJobs'> <h3 className=''>Find Jobs</h3> </Link> 
+             <Link href='/BrowseCompanies'> <h3>Browse Companies</h3></Link>
           </div>
         </div>
       </div>
@@ -47,7 +61,7 @@ const Header = () => {
             >
             <div className=''> 
                 <ul>
-                    <Link href="" onClick={toggleMenu}>
+                    <Link href="/FindJobs" onClick={toggleMenu}>
                   <li className='items-center px-4 py-[2px] border-b cursor-pointer'>
                          <h3 className="my-2 font-Epilogue text-[#515B6F] text-[16px]">Find Jobs</h3>
                       </li>
@@ -56,7 +70,7 @@ const Header = () => {
               </div>
             <div className=''> 
                 <ul>
-                    <Link href="" onClick={toggleMenu}>
+                    <Link href="/BrowseCompanies" onClick={toggleMenu}>
                   <li className='items-center px-4 py-[2px] border-b cursor-pointer'>
                          <h3 className="my-2 font-Epilogue text-[#515B6F] text-[16px]">Browse Companies</h3>
                       </li>
